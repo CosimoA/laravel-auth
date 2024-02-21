@@ -27,9 +27,7 @@
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_laravel">
-                        <!-- Nel tuo file app.blade.php -->
-                        <img src="{{ asset('img/logo.jpg') }}" alt="Logo">
-
+                        <img src="{{ asset('img/logo.jpg') }}" alt="Logo" style="width: 50px; height: 50px;">
                     </div>
                     {{-- config('app.name', 'Laravel') --}}
                 </a>
