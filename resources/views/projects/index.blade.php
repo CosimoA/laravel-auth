@@ -6,8 +6,8 @@
 <div class="contenitore">
     <div>
         <a href="{{Route('project.create')}}">
-            <div class="btn">
-                +
+            <div class="butt">
+                
             </div>
         </a>
 
@@ -27,8 +27,7 @@
             </div>
 
         </div>
-        @endforeach
-                 
+        @endforeach     
     </div>
 
 
