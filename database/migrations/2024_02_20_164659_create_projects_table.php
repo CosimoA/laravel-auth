@@ -21,7 +21,7 @@ return new class extends Migration {
             $table->date('start_date')->nullable();
             $table->date('completed_date')->nullable();
             $table->string('status', 64);
-            $table->text('description', 3000);
+            $table->text('description', 3000)->nullable();
             $table->string('web_site', 250)->nullable();
             $table->string('image_link', 250)->nullable();
             $table->timestamps();
