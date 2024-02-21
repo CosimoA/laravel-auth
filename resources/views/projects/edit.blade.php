@@ -2,20 +2,9 @@
 @section('content')
 
 <div class="contenitore">
-    <form action="{{ route('comic.update', $project->id) }}" method="POST">
+    <form action="{{ route('project.update', $project->id) }}" method="POST">
         @csrf
         @method('PUT') 
-        
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" value="{{ $comic->title }}"><br><br> 
-
-        <label for="price">Price:</label>
-        <!-- Aggiunto il valore corrente del prezzo -->
-        <input type="text" id="price" name="price" value="{{ $comic->price }}"><br><br> 
-
-        <label for="description">Description:</label><br>
-        <!-- Aggiunto il valore corrente della descrizione -->
-        <textarea id="description" name="description">{{ $comic->description }}</textarea><br><br> 
 
 
         {{--  --}}

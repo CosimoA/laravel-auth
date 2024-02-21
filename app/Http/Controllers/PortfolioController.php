@@ -75,7 +75,7 @@ class PortfolioController extends Controller
     public function edit($id)
     {
         $project = Project::find($id);
-        return view('project.edit', compact('project'));
+        return view('projects.edit', compact('project'));
     }
 
     /**
@@ -115,5 +115,7 @@ class PortfolioController extends Controller
         $project = Project ::find($id);
         $project->delete();
         return redirect()->route('projects.index');
-    }
+        // return redirect()->route('projects.index')->with('success', 'Fumetto eliminato con successo.');
+    }   
+
 }

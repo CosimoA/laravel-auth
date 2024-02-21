@@ -16,7 +16,7 @@
 
                 {{-- Card lato destro con il testo --}}
         <div class="card-left">
-            <a href="route{{'projects.index'}}">DELETE</a>
+            {{-- <a href="route{{'projects.index'}}">DELETE</a> --}}
             <h2>{{$project->name}}</h2>
             <div>{{$project->description}}</div>
             <div>{{$project->web_site}}</div>
@@ -29,7 +29,18 @@
                 <span>{{$project->completed_date}}</span>
             </div>
         </div>
-                 
+        @auth
+            <form action="{{ route('project.destroy', $project->id) }}" method="POST" class="delete-form">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            <form action="{{ route('project.edit', $project->id) }}">
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </form>
+        @endauth
+
+        
     </div>
 
 
