@@ -7,13 +7,13 @@
         @method ('POST')
 
         <label for="create_date">Create date: </label>
-        <input type="date" id="create_date" name="create_date">
+        <input type="date" id="create_date" name="create_date" required>
 
         <label for="name">Project name: </label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" required>
 
         <label for="used_technologies">Used technologies: </label>
-        <input type="text" id="used_technologies" name="used_technologies">
+        <input type="text" id="used_technologies" name="used_technologies" required>
 
         <label for="status">Project status: </label>
         <select name="status" id="status">
@@ -22,14 +22,17 @@
             <option value="completed">Completed</option>
         </select>
 
+
+        {{-- VALUTARE SE RICHIEDERLI SOLO NELL'edit --}}
         <label for="description">Description: </label>
         <input type="text" id="description" name="description">
 
         <label for="web">Website link: </label>
-        <input type="text" id="web" name="web" >
+        <input type="text" id="web" name="web_site" required>
+
 
         <label for="image">Image link: </label>
-        <input type="text" id="image" name="image">
+        <input type="text" id="image" name="image_link" required>
 
         <label for="completed_date">Completed date: </label>
         <input type="date" id="completed_date" name="completed_date">

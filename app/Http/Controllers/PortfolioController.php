@@ -39,7 +39,7 @@ class PortfolioController extends Controller
         $project = new Project();
     
         $project->name = $request->input('name');
-        $project->used_technologies = $request->input('used_technologies')-> nullable;
+        $project->used_technologies = $request->input('used_technologies');
         $project->create_date = $request->input('create_date');
         $project->start_date = $request->input('start_date');
         $project->completed_date = $request->input('completed_date');
@@ -50,7 +50,7 @@ class PortfolioController extends Controller
     
         $project->save();
     
-        return redirect ('project.index');
+        return redirect ('/');
     }
     
 

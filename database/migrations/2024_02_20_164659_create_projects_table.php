@@ -18,12 +18,12 @@ return new class extends Migration {
             $table->string('name', 64);
             $table->string('used_technologies', 250);
             $table->date('create_date');
-            $table->date('start_date');
-            $table->date('completed_date')->nullable;
+            $table->date('start_date')->nullable();
+            $table->date('completed_date')->nullable();
             $table->string('status', 64);
             $table->text('description', 3000);
-            $table->string('web_site', 250);
-            $table->string('image_link', 250);
+            $table->string('web_site', 250)->nullable();
+            $table->string('image_link', 250)->nullable();
             $table->timestamps();
         });
     }
