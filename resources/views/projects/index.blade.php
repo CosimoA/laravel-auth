@@ -5,7 +5,7 @@
 
 <div class="contenitore">
     <div>
-        <a href="{{Route('project.create')}}">
+        <a href="{{route('project.create')}}">
             <div class="butt">
                 
             </div>
@@ -21,7 +21,7 @@
             <span>{{$project->status}}</span>
 
             <div>
-                <a href="{{Route('project.show', $project->id)}}">
+                <a href="{{route('project.show', $project->id)}}">
                     DETAILS
                 </a>
             </div>

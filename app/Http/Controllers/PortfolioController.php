@@ -25,7 +25,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        return view('project.create');
     }
 
     /**
@@ -62,8 +62,8 @@ class PortfolioController extends Controller
      */
     public function show($id)
     {
-        $projects = Project::find($id);
-        return view ('projects.show', compact('projects'));
+        $project = Project::find($id);
+        return view ('project.show', compact('project'));
     }
 
     /**
@@ -97,6 +97,8 @@ class PortfolioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project ::find($id);
+        $project->delete();
+        return redirect()->route('projects.index');
     }
 }

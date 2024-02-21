@@ -17,11 +17,11 @@
 
                 {{-- Card lato destro con il testo --}}
         <div class="card-left">
+            <a href="route{{'projects.index'}}">DELETE</a>
             <h2>{{$project->name}}</h2>
             <div>{{$project->description}}</div>
             <div>{{$project->web_site}}</div>
             <div>{{$project->used_technologies}}</div>
-            <div>{{$project->status}}</div>
 
             <div class="timeline"> 
                 <span>{{$project->status}}</span>
