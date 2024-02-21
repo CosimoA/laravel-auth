@@ -18,6 +18,9 @@ return new class extends Migration
 
             $table->string('name', 64);
             $table->string('used_technologies', 250);
+            $table->date('create_date');
+            $table->date('start_date');
+            $table->date('completed_date');
             $table->string('status', 64);
             $table->text('description', 3000);
             $table->string('web_site', 250);
