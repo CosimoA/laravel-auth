@@ -24,17 +24,31 @@ Route::get('/', [PortfolioController::class, 'index'])
 
 // Create 
 
-Route::get('/projects/create', [PortfolioController::class, 'create'])
+Route::get('/project/create', [PortfolioController::class, 'create'])
     ->name('project.create');
 
 // Store 
 
-Route::post('/projects/store', [PortfolioController::class, 'store'])
+Route::post('/project/store', [PortfolioController::class, 'store'])
     ->name('project.store');
 
 // Show 
 
+Route::get('/project/{id}/show', [PortfolioController::class, 'show'])
+    ->name('project.show');
 
+
+// Destroy: 
+Route::delete('/project/{id}', [PortfolioController::class, 'destroy'])
+    ->name('project.destroy');
+
+// Edit
+Route::get('/project/{id}/edit', [PortfolioController::class, 'edit'])
+    ->name('project.edit');
+    
+// Update
+Route::put('/project/{id}/edit', [PortfolioController::class, 'update'])
+    ->name('project.update');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

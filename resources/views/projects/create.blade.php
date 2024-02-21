@@ -22,21 +22,6 @@
             <option value="completed">Completed</option>
         </select>
 
-
-        {{-- VALUTARE SE RICHIEDERLI SOLO NELL'edit --}}
-        {{-- <label for="description">Description: </label>
-        <input type="text" id="description" name="description">
-
-        <label for="web">Website link: </label>
-        <input type="text" id="web" name="web_site" required>
-
-
-        <label for="image">Image link: </label>
-        <input type="text" id="image" name="image_link" required>
-
-        <label for="completed_date">Completed date: </label>
-        <input type="date" id="completed_date" name="completed_date"> --}}
-
         <button type="Submit">Create</button>
     </form>
 </div>

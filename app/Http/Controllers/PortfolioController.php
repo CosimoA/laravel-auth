@@ -25,7 +25,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        return view('project.create');
     }
 
     /**
@@ -62,7 +62,8 @@ class PortfolioController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = Project::find($id);
+        return view ('projects.show', compact('project'));
     }
 
     /**
@@ -73,7 +74,8 @@ class PortfolioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Project::find($id);
+        return view('project.edit', compact('project'));
     }
 
     /**
@@ -85,7 +87,21 @@ class PortfolioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $project = Project::find($id);
+
+        $project->name = $request->input('name');
+        $project->used_technologies = $request->input('used_technologies');
+        $project->create_date = $request->input('create_date');
+        $project->start_date = $request->input('start_date');
+        $project->completed_date = $request->input('completed_date');
+        $project->status = $request->input('status');
+        $project->description = $request->input('description');
+        $project->web_site = $request->input('web_site');
+        $project->image_link = $request->input('image_link');
+
+        $project->save();
+        return redirect()->route('project.show', $project->id);
+
     }
 
     /**
@@ -96,6 +112,8 @@ class PortfolioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project ::find($id);
+        $project->delete();
+        return redirect()->route('projects.index');
     }
 }

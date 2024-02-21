@@ -5,11 +5,12 @@
 
 <div class="contenitore">
     <div>
-        <a href="{{Route('project.create')}}">
+        <a href="{{ route('project.create') }}">
             <div class="butt">
                 
             </div>
         </a>
+
     </div>
 
     <div class="card_container">
@@ -19,6 +20,13 @@
                 <h2>{{$project->name}}</h2>
                 <span class="technologies">{{$project->used_technologies}}</span>
                 <span class="status">{{$project->status}}</span>
+
+            <div>
+                <a href="{{route('project.show', $project->id)}}">
+                    DETAILS
+                </a>
+            </div>
+
             </div>
         </div>
         @endforeach     
