@@ -15,12 +15,62 @@
 }
 
 .card_head {
-    background-color: pink;
+    position: relative;
+    background-image: url('/public/img/img-default-project.jpg');
+    background-size: cover;
+    background-position: center;
     height: 20em;
-    width: 30em;
-    border-radius: 7px;
+    // aspect-ratio: 1 / 1;
+    border-radius: 4%;
     margin: 0.5em;
-    border: solid 2px black;
+    width: calc((100% / 3) - 0.5em * 2);
+    box-shadow: 0px 14px 6px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.card_info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff9800;
+    opacity: 0;
+    border-radius: 4%;
+    transition: opacity 0.5s ease;
+}
+
+.card_info:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+h2 {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.technologies {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    margin-left: 25px;
+}
+
+.status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .butt {
@@ -28,7 +78,7 @@
     height: 70px;
     border-radius: 50%;
     background-color: #ffc107;
-    font-size: 20px;
+    font-size: 15px;
     color: whitesmoke;
     text-align: center;
     line-height: 70px;
@@ -57,10 +107,10 @@
 
 
 .card_container {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
 }
 
 .portfolio-heading {
