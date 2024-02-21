@@ -8,7 +8,7 @@
 // @import "partials/main-nav";
 
 .contenitore {
-    padding: 0.5em;
+    padding: 2em 1em;
     max-width: 1300px;
     min-width: 30.5em;
     margin: 0 auto;
@@ -23,13 +23,38 @@
     border: solid 2px black;
 }
 
-.btn {
+.butt {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: yellow;
-    font-size: 40px;
+    background-color: #ffc107;
+    font-size: 20px;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 70px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
 }
+
+.butt::before {
+    content: '+';
+    font-size: 70px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.butt:hover {
+    background-color: #ff9800;
+    transform: scale(1.1);
+}
+
+
+
 
 .card_container {
     width: 100%;
