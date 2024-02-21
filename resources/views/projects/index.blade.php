@@ -5,7 +5,7 @@
 
 <div class="contenitore">
     <div>
-        <a href="{{route('project.create')}}">
+        <a href="{{ route('project.create') }}">
             <div class="butt">
                 
             </div>

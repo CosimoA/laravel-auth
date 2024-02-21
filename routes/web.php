@@ -34,13 +34,14 @@ Route::post('/project/store', [PortfolioController::class, 'store'])
 
 // Show 
 
-Route::get('/project/{id}', [PortfolioController::class, 'show'])
+Route::get('/project/{id}/show', [PortfolioController::class, 'show'])
     ->name('project.show');
 
 
 // Destroy: 
-Route::delete('/project/{id}', [PortfolioController::class, 'destroy'])->name('project.destroy');
-return redirect()->route('projects.index');
+Route::delete('/project/{id}', [PortfolioController::class, 'destroy'])
+    ->name('project.destroy');
+
 // Edit
 Route::get('/project/{id}/edit', [PortfolioController::class, 'edit'])
     ->name('project.edit');
