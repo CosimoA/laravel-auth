@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Project;
 
 class PortfolioController extends Controller
 {
@@ -13,7 +14,8 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        return view('projects.index');
+        $projects = Project::all();
+        return view('projects.index', compact('projects'));
     }
 
     /**
@@ -33,9 +35,24 @@ class PortfolioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        $project = new Project();
+    
+        $project->name = $request->input('name');
+        $project->used_technologies = $request->input('used_technologies')-> nullable;
+        $project->create_date = $request->input('create_date');
+        $project->start_date = $request->input('start_date');
+        $project->completed_date = $request->input('completed_date');
+        $project->status = $request->input('status');
+        $project->description = $request->input('description');
+        $project->web_site = $request->input('web_site');
+        $project->image_link = $request->input('image_link');
+    
+        $project->save();
+    
+        return redirect ('project.index');
     }
+    
 
     /**
      * Display the specified resource.

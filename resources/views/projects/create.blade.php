@@ -2,17 +2,18 @@
 @section('content')
 
 <div class="contenitore">
-    <form action="#" method="POST">
+    <form action="{{route('project.store')}}" method="POST">
         @csrf
+        @method ('POST')
 
         <label for="create_date">Create date: </label>
         <input type="date" id="create_date" name="create_date">
 
-        <label for="title">Project name: </label>
-        <input type="text" id="title" name="title">
+        <label for="name">Project name: </label>
+        <input type="text" id="name" name="name">
 
-        <label for="technology">Used technologies: </label>
-        <input type="text" id="technology" name="technology">
+        <label for="used_technologies">Used technologies: </label>
+        <input type="text" id="used_technologies" name="used_technologies">
 
         <label for="status">Project status: </label>
         <select name="status" id="status">

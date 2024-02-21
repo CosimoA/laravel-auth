@@ -24,7 +24,6 @@ return new class extends Migration {
             $table->text('description', 3000);
             $table->string('web_site', 250);
             $table->string('image_link', 250);
-
             $table->timestamps();
         });
     }

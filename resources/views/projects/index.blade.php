@@ -13,26 +13,16 @@
     </div>
 
     <div class="card_container">
+        @foreach ($projects as $project)
         <div class="card_head">
-            <h2></h2>
-            <span></span>
-            <span></span>   
+            <h2>{{$project->name}}</h2>
+            <span>{{$project->used_technologies}}</span>
+            <span>{{$project->status}}</span>
         </div>
-        <div class="card_head">
-            <h2></h2>
-            <span></span>
-            <span></span>   
-        </div>
-        <div class="card_head">
-            <h2></h2>
-            <span></span>
-            <span></span>   
-        </div>
-        <div class="card_head">
-            <h2></h2>
-            <span></span>
-            <span></span>   
-        </div>
+        @endforeach
+                 
     </div>
+
+
 </div>
 @endsection

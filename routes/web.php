@@ -18,12 +18,23 @@ use App\Http\Controllers\PortfolioController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
+// Index
 Route::get('/', [PortfolioController::class, 'index'])
     ->name('projects.index');
 
+// Create 
+
 Route::get('/projects/create', [PortfolioController::class, 'create'])
     ->name('project.create');
+
+// Store 
+
+Route::post('/projects/store', [PortfolioController::class, 'store'])
+    ->name('project.store');
+
+// Show 
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
