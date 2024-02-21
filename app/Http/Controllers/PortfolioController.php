@@ -25,7 +25,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        return view('project.create');
     }
 
     /**
@@ -35,9 +35,9 @@ class PortfolioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   
+    {
         $project = new Project();
-    
+
         $project->name = $request->input('name');
         $project->used_technologies = $request->input('used_technologies');
         $project->create_date = $request->input('create_date');
@@ -47,12 +47,12 @@ class PortfolioController extends Controller
         $project->description = $request->input('description');
         $project->web_site = $request->input('web_site');
         $project->image_link = $request->input('image_link');
-    
+
         $project->save();
-    
-        return redirect ('/');
+
+        return redirect('/');
     }
-    
+
 
     /**
      * Display the specified resource.
@@ -62,7 +62,8 @@ class PortfolioController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = Project::find($id);
+        return view ('project.show', compact('project'));
     }
 
     /**
@@ -111,6 +112,8 @@ class PortfolioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project ::find($id);
+        $project->delete();
+        return redirect()->route('projects.index');
     }
 }

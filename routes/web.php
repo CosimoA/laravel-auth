@@ -33,6 +33,14 @@ Route::post('/project/store', [PortfolioController::class, 'store'])
     ->name('project.store');
 
 // Show 
+
+Route::get('/project/{id}', [PortfolioController::class, 'show'])
+    ->name('project.show');
+
+
+// Destroy: 
+Route::delete('/project/{id}', [PortfolioController::class, 'destroy'])->name('project.destroy');
+return redirect()->route('projects.index');
 // Edit
 Route::get('/project/{id}/edit', [PortfolioController::class, 'edit'])
     ->name('project.edit');
