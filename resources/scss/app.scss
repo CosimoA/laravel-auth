@@ -1,8 +1,39 @@
 @import '~bootstrap/scss/bootstrap';
-// @import "partials/variables";
+@import "partials/variables";
 // @import "partials/common";
 // @import "partials/header";
 // @import "partials/home";
 // @import "partials/footer";
 // @import "partials/show";
 // @import "partials/main-nav";
+
+.contenitore {
+    padding: 0.5em;
+    max-width: 1300px;
+    min-width: 30.5em;
+    margin: 0 auto;
+}
+
+.card_head {
+    background-color: pink;
+    height: 20em;
+    width: 30em;
+    border-radius: 7px;
+    margin: 0.5em;
+    border: solid 2px black;
+}
+
+.btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: yellow;
+    font-size: 40px;
+}
+
+.card_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

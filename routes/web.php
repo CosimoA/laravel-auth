@@ -22,6 +22,8 @@ use App\Http\Controllers\PortfolioController;
 Route::get('/', [PortfolioController::class, 'index'])
     ->name('projects.index');
 
+Route::get('/projects/create', [PortfolioController::class, 'create'])
+    ->name('project.create');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -33,4 +35,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
