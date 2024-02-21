@@ -6,7 +6,6 @@
 <div class="contenitore">
 
     <div class="card_container">
-        @foreach ($projects as $project)
 
         {{-- Card lato sinistro con le immagini  --}}
         <div class="card-right">
@@ -30,7 +29,6 @@
                 <span>{{$project->completed_date}}</span>
             </div>
         </div>
-        @endforeach
                  
     </div>
 

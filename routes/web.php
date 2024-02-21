@@ -25,7 +25,7 @@ Route::get('/', [PortfolioController::class, 'index'])
 // Create 
 
 Route::get('/project/create', [PortfolioController::class, 'create'])
-    ->name('project.create');
+    ->name('projects.create');
 
 // Store 
 
@@ -34,9 +34,8 @@ Route::post('/project/store', [PortfolioController::class, 'store'])
 
 // Show 
 
-Route::get('/project/{id}/show', [PortfolioController::class, 'show'])
+Route::get('/project/{id}', [PortfolioController::class, 'show'])
     ->name('project.show');
-
 
 // Destroy: 
 Route::delete('/project/{id}', [PortfolioController::class, 'destroy'])

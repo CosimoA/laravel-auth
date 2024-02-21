@@ -25,7 +25,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('project.create');
+        return view('projects.create');
     }
 
     /**
