@@ -15,9 +15,11 @@
     <div class="card_container">
         @foreach ($projects as $project)
         <div class="card_head">
-            <h2>{{$project->name}}</h2>
-            <span>{{$project->used_technologies}}</span>
-            <span>{{$project->status}}</span>
+            <div class="card_info">
+                <h2>{{$project->name}}</h2>
+                <span class="technologies">{{$project->used_technologies}}</span>
+                <span class="status">{{$project->status}}</span>
+            </div>
         </div>
         @endforeach     
     </div>
