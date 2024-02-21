@@ -35,9 +35,9 @@ class PortfolioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   
+    {
         $project = new Project();
-    
+
         $project->name = $request->input('name');
         $project->used_technologies = $request->input('used_technologies');
         $project->create_date = $request->input('create_date');
@@ -47,12 +47,12 @@ class PortfolioController extends Controller
         $project->description = $request->input('description');
         $project->web_site = $request->input('web_site');
         $project->image_link = $request->input('image_link');
-    
+
         $project->save();
-    
-        return redirect ('/');
+
+        return redirect('/');
     }
-    
+
 
     /**
      * Display the specified resource.

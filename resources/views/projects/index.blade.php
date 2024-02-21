@@ -19,8 +19,7 @@
             <span>{{$project->used_technologies}}</span>
             <span>{{$project->status}}</span>
         </div>
-        @endforeach
-                 
+        @endforeach     
     </div>
 
 
