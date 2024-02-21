@@ -34,6 +34,8 @@ Route::post('/projects/store', [PortfolioController::class, 'store'])
 
 // Show 
 
+Route::get('/projects/show', [PortfolioController::class, 'show'])
+    ->name('projects.show');
 
 
 Route::get('/dashboard', function () {

@@ -10,6 +10,7 @@
                 +
             </div>
         </a>
+
     </div>
 
     <div class="card_container">
@@ -18,6 +19,13 @@
             <h2>{{$project->name}}</h2>
             <span>{{$project->used_technologies}}</span>
             <span>{{$project->status}}</span>
+
+            <div>
+                <a href="{{Route('project.show', $project->id)}}">
+                    DETAILS
+                </a>
+            </div>
+
         </div>
         @endforeach
                  
